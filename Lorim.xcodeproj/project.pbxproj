@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EDD666B1E255B5700441D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD666A1E255B5700441D55 /* AppDelegate.swift */; };
+		2EDD666D1E255B5700441D55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD666C1E255B5700441D55 /* ViewController.swift */; };
+		2EDD66701E255B5700441D55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD666E1E255B5700441D55 /* Main.storyboard */; };
+		2EDD66721E255B5700441D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66711E255B5700441D55 /* Assets.xcassets */; };
+		2EDD66751E255B5700441D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */; };
+		2EDD66801E255B5700441D55 /* LorimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD667F1E255B5700441D55 /* LorimTests.swift */; };
+		2EDD668B1E255B5700441D55 /* LorimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD668A1E255B5700441D55 /* LorimUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EDD667C1E255B5700441D55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EDD665F1E255B5700441D55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EDD66661E255B5700441D55;
+			remoteInfo = Lorim;
+		};
+		2EDD66871E255B5700441D55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EDD665F1E255B5700441D55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EDD66661E255B5700441D55;
+			remoteInfo = Lorim;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2EDD66671E255B5700441D55 /* Lorim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lorim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDD666A1E255B5700441D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2EDD666C1E255B5700441D55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2EDD666F1E255B5700441D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2EDD66711E255B5700441D55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2EDD66741E255B5700441D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2EDD66761E255B5700441D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EDD667B1E255B5700441D55 /* LorimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LorimTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDD667F1E255B5700441D55 /* LorimTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LorimTests.swift; sourceTree = "<group>"; };
+		2EDD66811E255B5700441D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EDD66861E255B5700441D55 /* LorimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LorimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDD668A1E255B5700441D55 /* LorimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LorimUITests.swift; sourceTree = "<group>"; };
+		2EDD668C1E255B5700441D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EDD66641E255B5700441D55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EDD66781E255B5700441D55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EDD66831E255B5700441D55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EDD665E1E255B5700441D55 = {
+			isa = PBXGroup;
+			children = (
+				2EDD66691E255B5700441D55 /* Lorim */,
+				2EDD667E1E255B5700441D55 /* LorimTests */,
+				2EDD66891E255B5700441D55 /* LorimUITests */,
+				2EDD66681E255B5700441D55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EDD66681E255B5700441D55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EDD66671E255B5700441D55 /* Lorim.app */,
+				2EDD667B1E255B5700441D55 /* LorimTests.xctest */,
+				2EDD66861E255B5700441D55 /* LorimUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EDD66691E255B5700441D55 /* Lorim */ = {
+			isa = PBXGroup;
+			children = (
+				2EDD666A1E255B5700441D55 /* AppDelegate.swift */,
+				2EDD666C1E255B5700441D55 /* ViewController.swift */,
+				2EDD666E1E255B5700441D55 /* Main.storyboard */,
+				2EDD66711E255B5700441D55 /* Assets.xcassets */,
+				2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */,
+				2EDD66761E255B5700441D55 /* Info.plist */,
+			);
+			path = Lorim;
+			sourceTree = "<group>";
+		};
+		2EDD667E1E255B5700441D55 /* LorimTests */ = {
+			isa = PBXGroup;
+			children = (
+				2EDD667F1E255B5700441D55 /* LorimTests.swift */,
+				2EDD66811E255B5700441D55 /* Info.plist */,
+			);
+			path = LorimTests;
+			sourceTree = "<group>";
+		};
+		2EDD66891E255B5700441D55 /* LorimUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2EDD668A1E255B5700441D55 /* LorimUITests.swift */,
+				2EDD668C1E255B5700441D55 /* Info.plist */,
+			);
+			path = LorimUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EDD66661E255B5700441D55 /* Lorim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EDD668F1E255B5700441D55 /* Build configuration list for PBXNativeTarget "Lorim" */;
+			buildPhases = (
+				2EDD66631E255B5700441D55 /* Sources */,
+				2EDD66641E255B5700441D55 /* Frameworks */,
+				2EDD66651E255B5700441D55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lorim;
+			productName = Lorim;
+			productReference = 2EDD66671E255B5700441D55 /* Lorim.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2EDD667A1E255B5700441D55 /* LorimTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EDD66921E255B5700441D55 /* Build configuration list for PBXNativeTarget "LorimTests" */;
+			buildPhases = (
+				2EDD66771E255B5700441D55 /* Sources */,
+				2EDD66781E255B5700441D55 /* Frameworks */,
+				2EDD66791E255B5700441D55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EDD667D1E255B5700441D55 /* PBXTargetDependency */,
+			);
+			name = LorimTests;
+			productName = LorimTests;
+			productReference = 2EDD667B1E255B5700441D55 /* LorimTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2EDD66851E255B5700441D55 /* LorimUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EDD66951E255B5700441D55 /* Build configuration list for PBXNativeTarget "LorimUITests" */;
+			buildPhases = (
+				2EDD66821E255B5700441D55 /* Sources */,
+				2EDD66831E255B5700441D55 /* Frameworks */,
+				2EDD66841E255B5700441D55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EDD66881E255B5700441D55 /* PBXTargetDependency */,
+			);
+			name = LorimUITests;
+			productName = LorimUITests;
+			productReference = 2EDD66861E255B5700441D55 /* LorimUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EDD665F1E255B5700441D55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Andryuschenko;
+				TargetAttributes = {
+					2EDD66661E255B5700441D55 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BLYGK7F49E;
+						ProvisioningStyle = Automatic;
+					};
+					2EDD667A1E255B5700441D55 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BLYGK7F49E;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2EDD66661E255B5700441D55;
+					};
+					2EDD66851E255B5700441D55 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BLYGK7F49E;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2EDD66661E255B5700441D55;
+					};
+				};
+			};
+			buildConfigurationList = 2EDD66621E255B5700441D55 /* Build configuration list for PBXProject "Lorim" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2EDD665E1E255B5700441D55;
+			productRefGroup = 2EDD66681E255B5700441D55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EDD66661E255B5700441D55 /* Lorim */,
+				2EDD667A1E255B5700441D55 /* LorimTests */,
+				2EDD66851E255B5700441D55 /* LorimUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EDD66651E255B5700441D55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EDD66751E255B5700441D55 /* LaunchScreen.storyboard in Resources */,
+				2EDD66721E255B5700441D55 /* Assets.xcassets in Resources */,
+				2EDD66701E255B5700441D55 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EDD66791E255B5700441D55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EDD66841E255B5700441D55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EDD66631E255B5700441D55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EDD666D1E255B5700441D55 /* ViewController.swift in Sources */,
+				2EDD666B1E255B5700441D55 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EDD66771E255B5700441D55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EDD66801E255B5700441D55 /* LorimTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EDD66821E255B5700441D55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EDD668B1E255B5700441D55 /* LorimUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EDD667D1E255B5700441D55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EDD66661E255B5700441D55 /* Lorim */;
+			targetProxy = 2EDD667C1E255B5700441D55 /* PBXContainerItemProxy */;
+		};
+		2EDD66881E255B5700441D55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EDD66661E255B5700441D55 /* Lorim */;
+			targetProxy = 2EDD66871E255B5700441D55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2EDD666E1E255B5700441D55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EDD666F1E255B5700441D55 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EDD66741E255B5700441D55 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EDD668D1E255B5700441D55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2EDD668E1E255B5700441D55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EDD66901E255B5700441D55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BLYGK7F49E;
+				INFOPLIST_FILE = Lorim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Andryuschenko.Lorim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2EDD66911E255B5700441D55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BLYGK7F49E;
+				INFOPLIST_FILE = Lorim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Andryuschenko.Lorim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2EDD66931E255B5700441D55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BLYGK7F49E;
+				INFOPLIST_FILE = LorimTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Andryuschenko.LorimTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lorim.app/Lorim";
+			};
+			name = Debug;
+		};
+		2EDD66941E255B5700441D55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BLYGK7F49E;
+				INFOPLIST_FILE = LorimTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Andryuschenko.LorimTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lorim.app/Lorim";
+			};
+			name = Release;
+		};
+		2EDD66961E255B5700441D55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BLYGK7F49E;
+				INFOPLIST_FILE = LorimUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Andryuschenko.LorimUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Lorim;
+			};
+			name = Debug;
+		};
+		2EDD66971E255B5700441D55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = BLYGK7F49E;
+				INFOPLIST_FILE = LorimUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Andryuschenko.LorimUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Lorim;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EDD66621E255B5700441D55 /* Build configuration list for PBXProject "Lorim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EDD668D1E255B5700441D55 /* Debug */,
+				2EDD668E1E255B5700441D55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EDD668F1E255B5700441D55 /* Build configuration list for PBXNativeTarget "Lorim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EDD66901E255B5700441D55 /* Debug */,
+				2EDD66911E255B5700441D55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2EDD66921E255B5700441D55 /* Build configuration list for PBXNativeTarget "LorimTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EDD66931E255B5700441D55 /* Debug */,
+				2EDD66941E255B5700441D55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2EDD66951E255B5700441D55 /* Build configuration list for PBXNativeTarget "LorimUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EDD66961E255B5700441D55 /* Debug */,
+				2EDD66971E255B5700441D55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EDD665F1E255B5700441D55 /* Project object */;
+}
