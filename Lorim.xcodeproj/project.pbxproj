@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2EDD666B1E255B5700441D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD666A1E255B5700441D55 /* AppDelegate.swift */; };
-		2EDD666D1E255B5700441D55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD666C1E255B5700441D55 /* ViewController.swift */; };
-		2EDD66701E255B5700441D55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD666E1E255B5700441D55 /* Main.storyboard */; };
 		2EDD66721E255B5700441D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66711E255B5700441D55 /* Assets.xcassets */; };
 		2EDD66751E255B5700441D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */; };
 		2EDD66801E255B5700441D55 /* LorimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD667F1E255B5700441D55 /* LorimTests.swift */; };
 		2EDD668B1E255B5700441D55 /* LorimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD668A1E255B5700441D55 /* LorimUITests.swift */; };
+		2EDD66991E255C2900441D55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66981E255C2900441D55 /* GoogleService-Info.plist */; };
+		2EDD669B1E255CE200441D55 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD669A1E255CE200441D55 /* LoginController.swift */; };
+		2EDD669D1E255FA300441D55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD669C1E255FA300441D55 /* ViewController.swift */; };
+		3A4C0034F972B7D544CB82E7 /* Pods_LorimTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39517357BF96B6DD679F67E6 /* Pods_LorimTests.framework */; };
+		D30765F239D0FBF3B057AE73 /* Pods_LorimUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C89E05647B570D301E81BEC /* Pods_LorimUITests.framework */; };
+		F13A2BCC46995D1A5644930E /* Pods_Lorim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6ABD05FA96ED3904DF8D50 /* Pods_Lorim.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07E7ECBD52A999B4E80AD8E0 /* Pods-LorimUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LorimUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LorimUITests/Pods-LorimUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1C6ABD05FA96ED3904DF8D50 /* Pods_Lorim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lorim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C89E05647B570D301E81BEC /* Pods_LorimUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LorimUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDD66671E255B5700441D55 /* Lorim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lorim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDD666A1E255B5700441D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2EDD666C1E255B5700441D55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2EDD666F1E255B5700441D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EDD66711E255B5700441D55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EDD66741E255B5700441D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EDD66761E255B5700441D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +52,15 @@
 		2EDD66861E255B5700441D55 /* LorimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LorimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDD668A1E255B5700441D55 /* LorimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LorimUITests.swift; sourceTree = "<group>"; };
 		2EDD668C1E255B5700441D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EDD66981E255C2900441D55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2EDD669A1E255CE200441D55 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		2EDD669C1E255FA300441D55 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		39517357BF96B6DD679F67E6 /* Pods_LorimTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LorimTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40FD31900A57107D2B409BD5 /* Pods-Lorim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lorim.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lorim/Pods-Lorim.release.xcconfig"; sourceTree = "<group>"; };
+		55DE9C9F5FF6AA8E4CC4B449 /* Pods-Lorim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lorim.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lorim/Pods-Lorim.debug.xcconfig"; sourceTree = "<group>"; };
+		86411D60D34DF168C0F88AFC /* Pods-LorimUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LorimUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LorimUITests/Pods-LorimUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8CC206CBBF13AEB9572293BE /* Pods-LorimTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LorimTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LorimTests/Pods-LorimTests.release.xcconfig"; sourceTree = "<group>"; };
+		F078B2EB96302EA892D38485 /* Pods-LorimTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LorimTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LorimTests/Pods-LorimTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F13A2BCC46995D1A5644930E /* Pods_Lorim.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4C0034F972B7D544CB82E7 /* Pods_LorimTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30765F239D0FBF3B057AE73 /* Pods_LorimUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,8 @@
 				2EDD667E1E255B5700441D55 /* LorimTests */,
 				2EDD66891E255B5700441D55 /* LorimUITests */,
 				2EDD66681E255B5700441D55 /* Products */,
+				BF28DE93DCFB0E12FA6B8644 /* Pods */,
+				E3ED1C11A81C8C45BAB81190 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				2EDD666A1E255B5700441D55 /* AppDelegate.swift */,
-				2EDD666C1E255B5700441D55 /* ViewController.swift */,
-				2EDD666E1E255B5700441D55 /* Main.storyboard */,
 				2EDD66711E255B5700441D55 /* Assets.xcassets */,
 				2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */,
 				2EDD66761E255B5700441D55 /* Info.plist */,
+				2EDD66981E255C2900441D55 /* GoogleService-Info.plist */,
+				2EDD669A1E255CE200441D55 /* LoginController.swift */,
+				2EDD669C1E255FA300441D55 /* ViewController.swift */,
 			);
 			path = Lorim;
 			sourceTree = "<group>";
@@ -125,6 +145,29 @@
 			path = LorimUITests;
 			sourceTree = "<group>";
 		};
+		BF28DE93DCFB0E12FA6B8644 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55DE9C9F5FF6AA8E4CC4B449 /* Pods-Lorim.debug.xcconfig */,
+				40FD31900A57107D2B409BD5 /* Pods-Lorim.release.xcconfig */,
+				F078B2EB96302EA892D38485 /* Pods-LorimTests.debug.xcconfig */,
+				8CC206CBBF13AEB9572293BE /* Pods-LorimTests.release.xcconfig */,
+				07E7ECBD52A999B4E80AD8E0 /* Pods-LorimUITests.debug.xcconfig */,
+				86411D60D34DF168C0F88AFC /* Pods-LorimUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3ED1C11A81C8C45BAB81190 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C6ABD05FA96ED3904DF8D50 /* Pods_Lorim.framework */,
+				39517357BF96B6DD679F67E6 /* Pods_LorimTests.framework */,
+				2C89E05647B570D301E81BEC /* Pods_LorimUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EDD668F1E255B5700441D55 /* Build configuration list for PBXNativeTarget "Lorim" */;
 			buildPhases = (
+				4F2A8ACB18654832FD0E0F40 /* [CP] Check Pods Manifest.lock */,
 				2EDD66631E255B5700441D55 /* Sources */,
 				2EDD66641E255B5700441D55 /* Frameworks */,
 				2EDD66651E255B5700441D55 /* Resources */,
+				F071E9495298021E53B47143 /* [CP] Embed Pods Frameworks */,
+				104EF805704C21A4F97892E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EDD66921E255B5700441D55 /* Build configuration list for PBXNativeTarget "LorimTests" */;
 			buildPhases = (
+				B576A7B399B692D2BCE69D27 /* [CP] Check Pods Manifest.lock */,
 				2EDD66771E255B5700441D55 /* Sources */,
 				2EDD66781E255B5700441D55 /* Frameworks */,
 				2EDD66791E255B5700441D55 /* Resources */,
+				824F0E7D052E05165421A76B /* [CP] Embed Pods Frameworks */,
+				5D6AE5D3ADE3663B0C7DCAE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EDD66951E255B5700441D55 /* Build configuration list for PBXNativeTarget "LorimUITests" */;
 			buildPhases = (
+				51B39AA93B7F660B2C98506B /* [CP] Check Pods Manifest.lock */,
 				2EDD66821E255B5700441D55 /* Sources */,
 				2EDD66831E255B5700441D55 /* Frameworks */,
 				2EDD66841E255B5700441D55 /* Resources */,
+				1DBE312BDB48105053EDF3D0 /* [CP] Embed Pods Frameworks */,
+				321DBFF2358C85EBFACB95B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,8 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EDD66751E255B5700441D55 /* LaunchScreen.storyboard in Resources */,
+				2EDD66991E255C2900441D55 /* GoogleService-Info.plist in Resources */,
 				2EDD66721E255B5700441D55 /* Assets.xcassets in Resources */,
-				2EDD66701E255B5700441D55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,12 +309,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		104EF805704C21A4F97892E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lorim/Pods-Lorim-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DBE312BDB48105053EDF3D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LorimUITests/Pods-LorimUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		321DBFF2358C85EBFACB95B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LorimUITests/Pods-LorimUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F2A8ACB18654832FD0E0F40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		51B39AA93B7F660B2C98506B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D6AE5D3ADE3663B0C7DCAE1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LorimTests/Pods-LorimTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		824F0E7D052E05165421A76B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LorimTests/Pods-LorimTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B576A7B399B692D2BCE69D27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F071E9495298021E53B47143 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lorim/Pods-Lorim-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2EDD66631E255B5700441D55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EDD666D1E255B5700441D55 /* ViewController.swift in Sources */,
+				2EDD669D1E255FA300441D55 /* ViewController.swift in Sources */,
+				2EDD669B1E255CE200441D55 /* LoginController.swift in Sources */,
 				2EDD666B1E255B5700441D55 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,14 +490,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2EDD666E1E255B5700441D55 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2EDD666F1E255B5700441D55 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -413,6 +596,7 @@
 		};
 		2EDD66901E255B5700441D55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55DE9C9F5FF6AA8E4CC4B449 /* Pods-Lorim.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BLYGK7F49E;
@@ -426,6 +610,7 @@
 		};
 		2EDD66911E255B5700441D55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40FD31900A57107D2B409BD5 /* Pods-Lorim.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BLYGK7F49E;
@@ -439,6 +624,7 @@
 		};
 		2EDD66931E255B5700441D55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F078B2EB96302EA892D38485 /* Pods-LorimTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +640,7 @@
 		};
 		2EDD66941E255B5700441D55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CC206CBBF13AEB9572293BE /* Pods-LorimTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +656,7 @@
 		};
 		2EDD66961E255B5700441D55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07E7ECBD52A999B4E80AD8E0 /* Pods-LorimUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = BLYGK7F49E;
@@ -483,6 +671,7 @@
 		};
 		2EDD66971E255B5700441D55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86411D60D34DF168C0F88AFC /* Pods-LorimUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = BLYGK7F49E;
@@ -514,6 +703,7 @@
 				2EDD66911E255B5700441D55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EDD66921E255B5700441D55 /* Build configuration list for PBXNativeTarget "LorimTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +712,7 @@
 				2EDD66941E255B5700441D55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EDD66951E255B5700441D55 /* Build configuration list for PBXNativeTarget "LorimUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +721,7 @@
 				2EDD66971E255B5700441D55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
