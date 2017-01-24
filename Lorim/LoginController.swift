@@ -7,6 +7,8 @@
 //
 
 import LBTAComponents
+import FirebaseAuth
+import FirebaseDatabase
 
 class LoginController: UIViewController {
  
@@ -26,8 +28,43 @@ class LoginController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()
+    
+    
+    func handleRegister() {
+        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else {
+            print("Form is not valid")
+            return }
+        
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (FIRUser, error) in
+            
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            guard let uid = user?.uid else {
+                return
+            }
+            
+            // authenticate user
+            let ref = FIRDatabase.database().reference(fromURL: "https://lorim-2e7a1.firebaseio.com/")
+            let usersReference = ref.child("users").child(user?.uid)
+            let values = ["name": name, "email": email]
+            usersReference.updateChildValues(values, withCompletionBlock: {(error, ref) in
+                
+                if error != nil {
+                    print (error)
+                }
+                print("saved user successfuly into firebase db")
+                
+            })
+            
+        })
+    }
     
     let nameTextField: UITextField = {
        
@@ -98,6 +135,10 @@ class LoginController: UIViewController {
         setupInputsContainerView()
         setupProfileImageView()
     }
+    
+
+    
+
     
     func setupProfileImageView() {
         
@@ -185,6 +226,9 @@ class LoginController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    
+    
     
 }
 

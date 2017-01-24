@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E641FE41E37D1AF0091C609 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E641FE31E37D1AF0091C609 /* GoogleService-Info.plist */; };
 		2EDD666B1E255B5700441D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD666A1E255B5700441D55 /* AppDelegate.swift */; };
 		2EDD66721E255B5700441D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66711E255B5700441D55 /* Assets.xcassets */; };
 		2EDD66751E255B5700441D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */; };
 		2EDD66801E255B5700441D55 /* LorimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD667F1E255B5700441D55 /* LorimTests.swift */; };
 		2EDD668B1E255B5700441D55 /* LorimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD668A1E255B5700441D55 /* LorimUITests.swift */; };
-		2EDD66991E255C2900441D55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66981E255C2900441D55 /* GoogleService-Info.plist */; };
 		2EDD669B1E255CE200441D55 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD669A1E255CE200441D55 /* LoginController.swift */; };
 		2EDD669D1E255FA300441D55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD669C1E255FA300441D55 /* ViewController.swift */; };
 		3A4C0034F972B7D544CB82E7 /* Pods_LorimTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39517357BF96B6DD679F67E6 /* Pods_LorimTests.framework */; };
@@ -41,6 +41,7 @@
 		07E7ECBD52A999B4E80AD8E0 /* Pods-LorimUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LorimUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LorimUITests/Pods-LorimUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1C6ABD05FA96ED3904DF8D50 /* Pods_Lorim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lorim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C89E05647B570D301E81BEC /* Pods_LorimUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LorimUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E641FE31E37D1AF0091C609 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EDD66671E255B5700441D55 /* Lorim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lorim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDD666A1E255B5700441D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDD66711E255B5700441D55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		2EDD66861E255B5700441D55 /* LorimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LorimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDD668A1E255B5700441D55 /* LorimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LorimUITests.swift; sourceTree = "<group>"; };
 		2EDD668C1E255B5700441D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2EDD66981E255C2900441D55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EDD669A1E255CE200441D55 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2EDD669C1E255FA300441D55 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39517357BF96B6DD679F67E6 /* Pods_LorimTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LorimTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,7 +120,7 @@
 				2EDD66711E255B5700441D55 /* Assets.xcassets */,
 				2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */,
 				2EDD66761E255B5700441D55 /* Info.plist */,
-				2EDD66981E255C2900441D55 /* GoogleService-Info.plist */,
+				2E641FE31E37D1AF0091C609 /* GoogleService-Info.plist */,
 				2EDD669A1E255CE200441D55 /* LoginController.swift */,
 				2EDD669C1E255FA300441D55 /* ViewController.swift */,
 			);
@@ -288,8 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EDD66751E255B5700441D55 /* LaunchScreen.storyboard in Resources */,
-				2EDD66991E255C2900441D55 /* GoogleService-Info.plist in Resources */,
 				2EDD66721E255B5700441D55 /* Assets.xcassets in Resources */,
+				2E641FE41E37D1AF0091C609 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

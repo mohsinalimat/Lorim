@@ -8,6 +8,9 @@ target 'Lorim' do
   # Pods for Lorim
 
 pod 'Firebase'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'Firebase/Auth'
 
 pod 'LBTAComponents', '~> 0.1.9'
 
