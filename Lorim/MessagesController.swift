@@ -31,33 +31,42 @@ class MessagesController: UITableViewController {
     
     func checkIfUserIsLoggedIn() {
         if FIRAuth.auth()?.currentUser?.uid == nil {
-            handleLogout()
-        }else{
-            
-            let uid = FIRAuth.auth()?.currentUser?.uid
-            FIRDatabase.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
-                print(snapshot)
-                
-                if let dictionary = snapshot.value as? [String: AnyObject] {
-                    self.navigationItem.title = dictionary["name"] as? String
-                }
-            })
-            
-            
+            perform(#selector(handleLogout), with: nil, afterDelay: 0)
+        } else {
+           fetchUserAndSetupNavBarTitle()
         }
+    }
+    
+    
+    func fetchUserAndSetupNavBarTitle() {
+        
+        guard let uid = FIRAuth.auth()?.currentUser?.uid else {
+            //for some reason uid is nil
+            return
+        }
+        FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                self.navigationItem.title = dictionary["name"] as? String
+            }
+            
+        }, withCancel: nil)
         
     }
+    
+    
     func handleLogout() {
-     
+        
         do {
             try FIRAuth.auth()?.signOut()
-            
         } catch let logoutError {
             print(logoutError)
         }
         
         let loginController = LoginController()
+        loginController.messagesController = self
         present(loginController, animated: true, completion: nil)
-        
     }
+    
 }
+

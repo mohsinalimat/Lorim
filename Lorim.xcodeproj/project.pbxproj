@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E08ACE21E3D143500AF5F81 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E08ACE11E3D143500AF5F81 /* Extensions.swift */; };
 		2E4C3ED51E3B24920083D490 /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C3ED41E3B24920083D490 /* NewMessageController.swift */; };
 		2E4C3ED81E3BB2F90083D490 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C3ED71E3BB2F90083D490 /* User.swift */; };
 		2E4C3EDA1E3BBAA30083D490 /* LoginController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C3ED91E3BBAA30083D490 /* LoginController+handlers.swift */; };
@@ -44,6 +45,7 @@
 		07E7ECBD52A999B4E80AD8E0 /* Pods-LorimUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LorimUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LorimUITests/Pods-LorimUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1C6ABD05FA96ED3904DF8D50 /* Pods_Lorim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lorim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C89E05647B570D301E81BEC /* Pods_LorimUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LorimUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E08ACE11E3D143500AF5F81 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2E4C3ED41E3B24920083D490 /* NewMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
 		2E4C3ED71E3BB2F90083D490 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E4C3ED91E3BBAA30083D490 /* LoginController+handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginController+handlers.swift"; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E08ACE01E3D141C00AF5F81 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2E08ACE11E3D143500AF5F81 /* Extensions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		2E4C3ED31E3B22C00083D490 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 		2EDD66691E255B5700441D55 /* Lorim */ = {
 			isa = PBXGroup;
 			children = (
+				2E08ACE01E3D141C00AF5F81 /* Helpers */,
 				2E4C3ED61E3BB2EC0083D490 /* Model */,
 				2E4C3ED31E3B22C00083D490 /* Controller */,
 				2EDD666A1E255B5700441D55 /* AppDelegate.swift */,
@@ -483,6 +494,7 @@
 				2EDD669B1E255CE200441D55 /* LoginController.swift in Sources */,
 				2E4C3ED81E3BB2F90083D490 /* User.swift in Sources */,
 				2EDD666B1E255B5700441D55 /* AppDelegate.swift in Sources */,
+				2E08ACE21E3D143500AF5F81 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
