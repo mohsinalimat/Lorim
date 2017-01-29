@@ -59,8 +59,7 @@ class LoginController: UIViewController {
             
             
             //self.messagesController?.fetchUserAndSetupNavBarTitle()
-            
-            self.messagesController?.navigationItem.title = values["name"] as? String
+            self.messagesController?.fetchUserAndSetupNavBarTitle()
             
             //successfully logged in our user
             self.dismiss(animated: true, completion: nil)

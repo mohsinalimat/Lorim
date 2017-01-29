@@ -32,39 +32,31 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
                 return
             }
             
-            let imageNamed = NSUUID().uuidString
-            let storageRef = FIRStorage.storage().reference().child("profile_images").child("\(imageNamed).png")
+            //successfully authenticated user
+            let imageName = NSUUID().uuidString
+            let storageRef = FIRStorage.storage().reference().child("profile_images").child("\(imageName).jpg")
             
-            
-            //self is needed because we are in a completion block
-            if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!)  {
-            
-
-            storageRef.put(uploadData, metadata: nil, completion: {(metadata, error) in
+            if let profileImage = self.profileImageView.image, let uploadData = UIImageJPEGRepresentation(profileImage, 0.1) {
                 
-                if error != nil {
-                    print(error)
-                    return
-                }
+                //            if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {
                 
-                //unwrapping gives us access
-                if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
-                
-                let values = ["name": name, "email": email, "profileImageUrl": profileImageUrl]
-                
-                
-                self.registerUserIntoDatabaseWithUID(uid: uid, values: values as [String : AnyObject])
-                
-                }
-                
-            })
-        }
-            
-            
+                storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
+                    
+                    if error != nil {
+                        print(error)
+                        return
+                    }
+                    
+                    if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
+                        
+                        let values = ["name": name, "email": email, "profileImageUrl": profileImageUrl]
+                        
+                        self.registerUserIntoDatabaseWithUID(uid: uid, values: values as [String : AnyObject])
+                    }
+                })
+            }
         })
-    
     }
-    
     
         private func registerUserIntoDatabaseWithUID(uid: String, values: [String: AnyObject]) {
         //successfully authenticated user
@@ -77,7 +69,15 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
                 return
             }
             
-            self.messagesController?.fetchUserAndSetupNavBarTitle()
+            //self.messagesController?.fetchUserAndSetupNavBarTitle()
+            
+          //  self.messagesController?.navigationItem.title = values["name"] as? String
+            
+            let user = User()
+            
+            user.setValuesForKeys(values)
+            
+            self.messagesController?.setupNavBarWithUser(user)
             
             self.dismiss(animated: true, completion: nil)
         })

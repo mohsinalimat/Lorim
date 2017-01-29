@@ -37,9 +37,9 @@ class NewMessageController: UITableViewController {
                 self.users.append(user)
                 
                 //this will crash because of background thread, so lets use dispatch_async to fix
-                DispatchQueue.main.async(execute: {
+                DispatchQueue.main.async{
                     self.tableView.reloadData()
-                })
+                }
                 
                 //                user.name = dictionary["name"]
             }
@@ -112,6 +112,8 @@ class UserCell: UITableViewCell {
     }
     
 }
+
+
 
 
 
