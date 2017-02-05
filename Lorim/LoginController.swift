@@ -23,6 +23,7 @@ class LoginController: UIViewController {
         return view
     }()
     
+    
     lazy var loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor(r: 80, g: 101, b: 161)
@@ -57,11 +58,10 @@ class LoginController: UIViewController {
                 return
             }
             
+            //successfully logged in our user
             
-            //self.messagesController?.fetchUserAndSetupNavBarTitle()
             self.messagesController?.fetchUserAndSetupNavBarTitle()
             
-            //successfully logged in our user
             self.dismiss(animated: true, completion: nil)
             
         })
