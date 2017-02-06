@@ -124,6 +124,33 @@ class MessagesController: UITableViewController {
         return messages.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let message = messages[indexPath.row]
+        
+        guard let chatPartnerId = message.chatPartnerId() else {
+            return
+        }
+        
+        let ref = FIRDatabase.database().reference().child("users").child(chatPartnerId)
+        ref.observe(.value, with: { (snapshot) in
+        
+            print(snapshot)
+            
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                    return
+            }
+            
+            let user = User()
+            user.id = chatPartnerId
+            user.setValuesForKeys(dictionary)
+            self.showChatControllerForUser(user: user)
+            
+        }, withCancel: nil)
+        
+        
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
@@ -224,7 +251,7 @@ class MessagesController: UITableViewController {
     
     func showChatControllerForUser(user: User) {
         
-        let chatLogController = ChatLoginController(collectionViewLayout: UICollectionViewLayout())
+        let chatLogController = ChatLoginController(collectionViewLayout: UICollectionViewFlowLayout())
         chatLogController.user = user
         navigationController?.pushViewController(chatLogController, animated: true)
         

@@ -15,6 +15,7 @@
 		2EBC89CE1E3E61DE00C37073 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC89CD1E3E61DE00C37073 /* ChatLogController.swift */; };
 		2EBC89D01E4108D600C37073 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC89CF1E4108D600C37073 /* Message.swift */; };
 		2EBC89D31E410E3700C37073 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC89D21E410E3700C37073 /* UserCell.swift */; };
+		2EBC89D51E484C4200C37073 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC89D41E484C4200C37073 /* ChatMessageCell.swift */; };
 		2EDD666B1E255B5700441D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD666A1E255B5700441D55 /* AppDelegate.swift */; };
 		2EDD66721E255B5700441D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66711E255B5700441D55 /* Assets.xcassets */; };
 		2EDD66751E255B5700441D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */; };
@@ -56,6 +57,7 @@
 		2EBC89CD1E3E61DE00C37073 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		2EBC89CF1E4108D600C37073 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2EBC89D21E410E3700C37073 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		2EBC89D41E484C4200C37073 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		2EDD66671E255B5700441D55 /* Lorim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lorim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDD666A1E255B5700441D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDD66711E255B5700441D55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				2EBC89D21E410E3700C37073 /* UserCell.swift */,
+				2EBC89D41E484C4200C37073 /* ChatMessageCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				2E4C3EDA1E3BBAA30083D490 /* LoginController+handlers.swift in Sources */,
 				2EDD669B1E255CE200441D55 /* LoginController.swift in Sources */,
 				2E4C3ED81E3BB2F90083D490 /* User.swift in Sources */,
+				2EBC89D51E484C4200C37073 /* ChatMessageCell.swift in Sources */,
 				2EDD666B1E255B5700441D55 /* AppDelegate.swift in Sources */,
 				2EBC89D31E410E3700C37073 /* UserCell.swift in Sources */,
 				2E08ACE21E3D143500AF5F81 /* Extensions.swift in Sources */,
