@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 
-
 class NewMessageController: UITableViewController {
     
     let cellId = "cellId"
@@ -38,9 +37,9 @@ class NewMessageController: UITableViewController {
                 self.users.append(user)
                 
                 //this will crash because of background thread, so lets use dispatch_async to fix
-                DispatchQueue.main.async(execute: {
+                DispatchQueue.main.async {
                     self.tableView.reloadData()
-                })
+                }
                 
                 //                user.name = dictionary["name"]
             }
@@ -80,8 +79,16 @@ class NewMessageController: UITableViewController {
         dismiss(animated: true) {
             print("Dismiss completed")
             let user = self.users[indexPath.row]
-            self.messagesController?.showChatControllerForUser(user: user)
+            self.messagesController?.showChatControllerForUser(user)
         }
     }
     
 }
+
+
+
+
+
+
+
+

@@ -6,8 +6,7 @@
 //  Created by Nikolas Andryuschenko on 1/10/17.
 //  Copyright © 2017 Andryuschenko. All rights reserved.
 //
-
-import LBTAComponents
+import UIKit
 import Firebase
 
 class LoginController: UIViewController {
@@ -22,7 +21,6 @@ class LoginController: UIViewController {
         view.layer.masksToBounds = true
         return view
     }()
-    
     
     lazy var loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
@@ -68,7 +66,6 @@ class LoginController: UIViewController {
         
     }
     
-    
     let nameTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Name"
@@ -107,18 +104,16 @@ class LoginController: UIViewController {
     
     lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "me")
+        imageView.image = UIImage(named: "gameofthrones_splash")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectProfileImageView)))
-         imageView.isUserInteractionEnabled = true
-        
+        imageView.isUserInteractionEnabled = true
         
         return imageView
     }()
     
-   
     lazy var loginRegisterSegmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Login", "Register"])
         sc.translatesAutoresizingMaskIntoConstraints = false
@@ -139,9 +134,6 @@ class LoginController: UIViewController {
         nameTextFieldHeightAnchor?.isActive = false
         nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 0 : 1/3)
         nameTextFieldHeightAnchor?.isActive = true
-        
-        nameTextField.layer.masksToBounds = true
-        
         
         emailTextFieldHeightAnchor?.isActive = false
         emailTextFieldHeightAnchor = emailTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 1/2 : 1/3)
@@ -262,5 +254,11 @@ extension UIColor {
     }
     
 }
+
+
+
+
+
+
 
 

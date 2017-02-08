@@ -6,6 +6,7 @@
 //  Copyright © 2017 Andryuschenko. All rights reserved.
 //
 
+
 import UIKit
 import Firebase
 
@@ -30,7 +31,6 @@ class UserCell: UITableViewCell {
     }
     
     fileprivate func setupNameAndProfileImage() {
-  
         
         if let id = message?.chatPartnerId() {
             let ref = FIRDatabase.database().reference().child("users").child(id)

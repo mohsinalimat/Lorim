@@ -6,6 +6,7 @@
 //  Copyright © 2017 Andryuschenko. All rights reserved.
 //
 
+
 import UIKit
 import Firebase
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
@@ -33,7 +34,6 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 }
 
 
-
 class MessagesController: UITableViewController {
     
     let cellId = "cellId"
@@ -52,6 +52,7 @@ class MessagesController: UITableViewController {
         
         //        observeMessages()
     }
+    
     var messages = [Message]()
     var messagesDictionary = [String: Message]()
     
@@ -63,69 +64,75 @@ class MessagesController: UITableViewController {
         let ref = FIRDatabase.database().reference().child("user-messages").child(uid)
         ref.observe(.childAdded, with: { (snapshot) in
             
-            let messageId = snapshot.key
-            let messagesReference = FIRDatabase.database().reference().child("messages").child(messageId)
-            
-            messagesReference.observeSingleEvent(of: .value, with: { (snapshot) in
+            let userId = snapshot.key
+            FIRDatabase.database().reference().child("user-messages").child(uid).child(userId).observe(.childAdded, with: { (snapshot) in
                 
-                if let dictionary = snapshot.value as? [String: AnyObject] {
-                    let message = Message()
-                    message.setValuesForKeys(dictionary)
-                    
-                    if let chatPartnerId = message.toId {
-                        self.messagesDictionary[chatPartnerId] = message
-                        
-                        self.messages = Array(self.messagesDictionary.values)
-                        self.messages.sort(by: { (message1, message2) -> Bool in
-                            
-                            return message1.timestamp?.int32Value > message2.timestamp?.int32Value
-                        })
-                    }
-                    
-                    //this will crash because of background thread, so lets call this on dispatch_async main thread
-                    DispatchQueue.main.async(execute: {
-                        self.tableView.reloadData()
-                    })
-                }
+                let messageId = snapshot.key
+                self.fetchMessageWithMessageId(messageId)
                 
             }, withCancel: nil)
             
         }, withCancel: nil)
     }
     
-    func observeMessages() {
-        let ref = FIRDatabase.database().reference().child("messages")
-        ref.observe(.childAdded, with: { (snapshot) in
+    fileprivate func fetchMessageWithMessageId(_ messageId: String) {
+        let messagesReference = FIRDatabase.database().reference().child("messages").child(messageId)
+        
+        messagesReference.observeSingleEvent(of: .value, with: { (snapshot) in
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 let message = Message()
                 message.setValuesForKeys(dictionary)
                 
-                if let toId = message.toId {
-                    self.messagesDictionary[toId] = message
-                    
-                    self.messages = Array(self.messagesDictionary.values)
-                    self.messages.sort(by: { (message1, message2) -> Bool in
-                        
-                        return message1.timestamp?.int32Value > message2.timestamp?.int32Value
-                    })
+                if let chatPartnerId = message.chatPartnerId() {
+                    self.messagesDictionary[chatPartnerId] = message
                 }
                 
-                //this will crash because of background thread, so lets call this on dispatch_async main thread
-                DispatchQueue.main.async(execute: {
-                    self.tableView.reloadData()
-                })
+                self.attemptReloadOfTable()
             }
             
         }, withCancel: nil)
     }
-
+    
+    fileprivate func attemptReloadOfTable() {
+        self.timer?.invalidate()
+        
+        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.handleReloadTable), userInfo: nil, repeats: false)
+    }
+    
+    var timer: Timer?
+    
+    func handleReloadTable() {
+        self.messages = Array(self.messagesDictionary.values)
+        self.messages.sort(by: { (message1, message2) -> Bool in
+            
+            return message1.timestamp?.int32Value > message2.timestamp?.int32Value
+        })
+        
+        //this will crash because of background thread, so lets call this on dispatch_async main thread
+        DispatchQueue.main.async{
+            self.tableView.reloadData()
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
         
+        let message = messages[indexPath.row]
+        cell.message = message
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let message = messages[indexPath.row]
         
         guard let chatPartnerId = message.chatPartnerId() else {
@@ -133,32 +140,17 @@ class MessagesController: UITableViewController {
         }
         
         let ref = FIRDatabase.database().reference().child("users").child(chatPartnerId)
-        ref.observe(.value, with: { (snapshot) in
-        
-            print(snapshot)
-            
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let dictionary = snapshot.value as? [String: AnyObject] else {
-                    return
+                return
             }
             
             let user = User()
             user.id = chatPartnerId
             user.setValuesForKeys(dictionary)
-            self.showChatControllerForUser(user: user)
+            self.showChatControllerForUser(user)
             
         }, withCancel: nil)
-        
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
-        
-        let message = messages[indexPath.row]
-        cell.message = message
-        
-        return cell
     }
     
     func handleNewMessage() {
@@ -185,7 +177,7 @@ class MessagesController: UITableViewController {
         FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                //                self.navigationItem.title = dictionary["name"] as? String
+                //                self.navigatiodnItem.title = dictionary["name"] as? String
                 
                 let user = User()
                 user.setValuesForKeys(dictionary)
@@ -194,7 +186,6 @@ class MessagesController: UITableViewController {
             
         }, withCancel: nil)
     }
-    
     
     func setupNavBarWithUser(_ user: User) {
         messages.removeAll()
@@ -248,20 +239,11 @@ class MessagesController: UITableViewController {
         //        titleView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showChatController)))
     }
     
-    
-    func showChatControllerForUser(user: User) {
-        
-        let chatLogController = ChatLoginController(collectionViewLayout: UICollectionViewFlowLayout())
+    func showChatControllerForUser(_ user: User) {
+        let chatLogController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
         chatLogController.user = user
         navigationController?.pushViewController(chatLogController, animated: true)
-        
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 72
-    }
-    
-    
     
     func handleLogout() {
         
