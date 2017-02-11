@@ -7,10 +7,9 @@
 //
 
 
+
 import UIKit
 import Firebase
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     switch (lhs, rhs) {
     case let (l?, r?):
@@ -22,8 +21,6 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     }
 }
 
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
 fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     switch (lhs, rhs) {
     case let (l?, r?):
@@ -53,7 +50,6 @@ class MessagesController: UITableViewController {
         //        observeMessages()
         
         tableView.allowsMultipleSelectionDuringEditing = true
-        
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -61,34 +57,31 @@ class MessagesController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-       
+        
         guard let uid = FIRAuth.auth()?.currentUser?.uid else {
             return
         }
         
-        let message = self.messages[indexPath.row]
+        let message = self.messages[(indexPath as NSIndexPath).row]
         
         if let chatPartnerId = message.chatPartnerId() {
-            FIRDatabase.database().reference().child("user-message").child(uid).child(chatPartnerId).removeValue(completionBlock: { (error, ref) in
+            FIRDatabase.database().reference().child("user-messages").child(uid).child(chatPartnerId).removeValue(completionBlock: { (error, ref) in
                 
                 if error != nil {
                     print("Failed to delete message:", error)
                     return
                 }
                 
-
                 self.messagesDictionary.removeValue(forKey: chatPartnerId)
-
                 self.attemptReloadOfTable()
                 
-//                self.messages.remove(at: indexPath.row)
-//                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                //                //this is one way of updating the table, but its actually not that safe..
+                //                self.messages.removeAtIndex(indexPath.row)
+                //                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
                 
             })
         }
-        
     }
-    
     
     var messages = [Message]()
     var messagesDictionary = [String: Message]()
@@ -110,16 +103,15 @@ class MessagesController: UITableViewController {
             }, withCancel: nil)
             
         }, withCancel: nil)
-    
+        
         ref.observe(.childRemoved, with: { (snapshot) in
             print(snapshot.key)
             print(self.messagesDictionary)
             
             self.messagesDictionary.removeValue(forKey: snapshot.key)
             self.attemptReloadOfTable()
-             
             
-        } , withCancel: nil)
+        }, withCancel: nil)
     }
     
     fileprivate func fetchMessageWithMessageId(_ messageId: String) {
@@ -156,9 +148,9 @@ class MessagesController: UITableViewController {
         })
         
         //this will crash because of background thread, so lets call this on dispatch_async main thread
-        DispatchQueue.main.async{
+        DispatchQueue.main.async(execute: {
             self.tableView.reloadData()
-        }
+        })
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -168,7 +160,7 @@ class MessagesController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
         
-        let message = messages[indexPath.row]
+        let message = messages[(indexPath as NSIndexPath).row]
         cell.message = message
         
         return cell
@@ -179,7 +171,7 @@ class MessagesController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let message = messages[indexPath.row]
+        let message = messages[(indexPath as NSIndexPath).row]
         
         guard let chatPartnerId = message.chatPartnerId() else {
             return
@@ -223,7 +215,7 @@ class MessagesController: UITableViewController {
         FIRDatabase.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                //                self.navigatiodnItem.title = dictionary["name"] as? String
+                //                self.navigationItem.title = dictionary["name"] as? String
                 
                 let user = User()
                 user.setValuesForKeys(dictionary)
@@ -305,4 +297,3 @@ class MessagesController: UITableViewController {
     }
     
 }
-
