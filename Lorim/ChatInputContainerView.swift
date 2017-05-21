@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatInputContainerView: UIView, UITextFieldDelegate  {
+class ChatInputContainerView: UIView, UITextFieldDelegate {
     
     weak var chatLogController: ChatLogController? {
         didSet {

@@ -11,9 +11,8 @@ import Firebase
 import MobileCoreServices
 import AVFoundation
 
-
-
 class ChatLogController: UICollectionViewController, UITextFieldDelegate, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     var user: User? {
         didSet {
             navigationItem.title = user?.name
@@ -105,7 +104,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         let uploadTask = FIRStorage.storage().reference().child("message_movies").child(filename).putFile(url, metadata: nil, completion: { (metadata, error) in
             
             if error != nil {
-                print("Failed upload of video:", error)
+                print("Failed upload of video:", error!)
                 return
             }
             
@@ -173,7 +172,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
             ref.put(uploadData, metadata: nil, completion: { (metadata, error) in
                 
                 if error != nil {
-                    print("Failed to upload image:", error)
+                    print("Failed to upload image:", error!)
                     return
                 }
                 
@@ -221,8 +220,8 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     }
     
     func handleKeyboardWillShow(_ notification: Notification) {
-        let keyboardFrame = ((notification as NSNotification).userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
-        let keyboardDuration = ((notification as NSNotification).userInfo?[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
+        let keyboardFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+        let keyboardDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
         
         containerViewBottomAnchor?.constant = -keyboardFrame!.height
         UIView.animate(withDuration: keyboardDuration!, animations: {
@@ -231,7 +230,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     }
     
     func handleKeyboardWillHide(_ notification: Notification) {
-        let keyboardDuration = ((notification as NSNotification).userInfo?[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
+        let keyboardDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
         
         containerViewBottomAnchor?.constant = 0
         UIView.animate(withDuration: keyboardDuration!, animations: {
@@ -248,7 +247,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         
         cell.chatLogController = self
         
-        let message = messages[(indexPath as NSIndexPath).item]
+        let message = messages[indexPath.item]
         
         cell.message = message
         
@@ -312,7 +311,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         
         var height: CGFloat = 80
         
-        let message = messages[(indexPath as NSIndexPath).item]
+        let message = messages[indexPath.item]
         if let text = message.text {
             height = estimateFrameForText(text).height + 20
         } else if let imageWidth = message.imageWidth?.floatValue, let imageHeight = message.imageHeight?.floatValue {
@@ -352,9 +351,9 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         let childRef = ref.childByAutoId()
         let toId = user!.id!
         let fromId = FIRAuth.auth()!.currentUser!.uid
-        let timestamp = NSNumber(value: Int(Date().timeIntervalSince1970))
+        let timestamp = Int(Date().timeIntervalSince1970)
         
-        var values: [String: AnyObject] = ["toId": toId as AnyObject, "fromId": fromId as AnyObject, "timestamp": timestamp]
+        var values: [String: AnyObject] = ["toId": toId as AnyObject, "fromId": fromId as AnyObject, "timestamp": timestamp as AnyObject]
         
         //append properties dictionary onto values somehow??
         //key $0, value $1
@@ -362,7 +361,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         
         childRef.updateChildValues(values) { (error, ref) in
             if error != nil {
-                print(error)
+                print(error!)
                 return
             }
             
@@ -444,19 +443,6 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

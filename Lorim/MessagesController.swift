@@ -10,6 +10,8 @@
 
 import UIKit
 import Firebase
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     switch (lhs, rhs) {
     case let (l?, r?):
@@ -21,6 +23,8 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     }
 }
 
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
 fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     switch (lhs, rhs) {
     case let (l?, r?):
@@ -62,13 +66,13 @@ class MessagesController: UITableViewController {
             return
         }
         
-        let message = self.messages[(indexPath as NSIndexPath).row]
+        let message = self.messages[indexPath.row]
         
         if let chatPartnerId = message.chatPartnerId() {
             FIRDatabase.database().reference().child("user-messages").child(uid).child(chatPartnerId).removeValue(completionBlock: { (error, ref) in
                 
                 if error != nil {
-                    print("Failed to delete message:", error)
+                    print("Failed to delete message:", error!)
                     return
                 }
                 
@@ -160,7 +164,7 @@ class MessagesController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
         
-        let message = messages[(indexPath as NSIndexPath).row]
+        let message = messages[indexPath.row]
         cell.message = message
         
         return cell
@@ -171,7 +175,7 @@ class MessagesController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let message = messages[(indexPath as NSIndexPath).row]
+        let message = messages[indexPath.row]
         
         guard let chatPartnerId = message.chatPartnerId() else {
             return
@@ -183,9 +187,8 @@ class MessagesController: UITableViewController {
                 return
             }
             
-            let user = User()
+            let user = User(dictionary: dictionary)
             user.id = chatPartnerId
-            user.setValuesForKeys(dictionary)
             self.showChatControllerForUser(user)
             
         }, withCancel: nil)
@@ -217,8 +220,7 @@ class MessagesController: UITableViewController {
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 //                self.navigationItem.title = dictionary["name"] as? String
                 
-                let user = User()
-                user.setValuesForKeys(dictionary)
+                let user = User(dictionary: dictionary)
                 self.setupNavBarWithUser(user)
             }
             
@@ -297,3 +299,4 @@ class MessagesController: UITableViewController {
     }
     
 }
+
