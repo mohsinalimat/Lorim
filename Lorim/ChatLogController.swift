@@ -134,6 +134,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     fileprivate func thumbnailImageForFileUrl(_ fileUrl: URL) -> UIImage? {
         let asset = AVAsset(url: fileUrl)
         let imageGenerator = AVAssetImageGenerator(asset: asset)
+        imageGenerator.appliesPreferredTrackTransform = true
         
         do {
             

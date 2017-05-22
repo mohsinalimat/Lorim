@@ -47,18 +47,37 @@ class ChatMessageCell: UICollectionViewCell {
             bubbleView.layer.addSublayer(playerLayer!)
             
             player?.play()
+            self.playerLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
             activityIndicatorView.startAnimating()
             playButton.isHidden = true
             
             print("Attempting to play video......???")
+            
+            
+            NotificationCenter.default.addObserver(self, selector:#selector(self.playerDidFinishPlaying(note:)),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
         }
+    }
+    
+    
+    func playerDidFinishPlaying(note: NSNotification){
+        DispatchQueue.main.async {
+            self.player?.seek(to: kCMTimeZero)
+          
+            self.playerLayer?.isHidden = true
+            self.playButton.isHidden = false
+            
+            self.activityIndicatorView.isHidden = true
+            
+            //  self.player?.play()
+        }
+        
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         playerLayer?.removeFromSuperlayer()
         player?.pause()
-        activityIndicatorView.stopAnimating()
+       activityIndicatorView.stopAnimating()
     }
     
     let textView: UITextView = {
