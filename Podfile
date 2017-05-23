@@ -11,6 +11,7 @@ pod 'Firebase'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'Firebase/Auth'
+pod 'Firebase/Messaging'
 
 pod 'LBTAComponents', '~> 0.1.9'
 

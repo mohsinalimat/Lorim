@@ -38,6 +38,11 @@ class ChatMessageCell: UICollectionViewCell {
     var playerLayer: AVPlayerLayer?
     var player: AVPlayer?
     
+    func handleVideoZoomTap() {
+    print("ZOOM ZOOM")
+    
+    }
+    
     func handlePlay() {
         if let videoUrlString = message?.videoUrl, let url = URL(string: videoUrlString) {
             player = AVPlayer(url: url)
@@ -48,6 +53,9 @@ class ChatMessageCell: UICollectionViewCell {
             
             player?.play()
             self.playerLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
+            
+            
+            
             activityIndicatorView.startAnimating()
             playButton.isHidden = true
             
