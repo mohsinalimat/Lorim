@@ -15,7 +15,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     
     var user: User? {
         didSet {
-            navigationItem.title = user?.name
+//            navigationItem.title = user?.name
             
             observeMessages()
         }
@@ -68,6 +68,15 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         collectionView?.keyboardDismissMode = .interactive
         
         setupKeyboardObservers()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(handleCancel))
+        navigationItem.leftBarButtonItem?.tintColor = .white
+        
+        
+    }
+    
+    func handleCancel() {
+        _ = navigationController?.popViewController(animated: true)
     }
     
     lazy var inputContainerView: ChatInputContainerView = {
@@ -128,6 +137,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         
         uploadTask.observe(.success) { (snapshot) in
             self.navigationItem.title = self.user?.name
+            
         }
     }
     
@@ -212,6 +222,18 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
             let indexPath = IndexPath(item: messages.count - 1, section: 0)
             collectionView?.scrollToItem(at: indexPath, at: .top, animated: true)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        let nameLabel = UILabel()
+        
+        nameLabel.text = user?.name
+        nameLabel.textColor = .white
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        navigationItem.titleView = nameLabel
     }
     
     override func viewDidDisappear(_ animated: Bool) {

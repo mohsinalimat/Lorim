@@ -18,7 +18,11 @@ class NewMessageController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(r: 23, g: 100, b: 188)
+        
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
+        navigationItem.leftBarButtonItem?.tintColor = .white
         
         tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
         

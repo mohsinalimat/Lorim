@@ -105,7 +105,7 @@ class LoginController: UIViewController {
     
     lazy var profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "gameofthrones_splash")
+        imageView.image = UIImage(named: "LorimLogo")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         
@@ -144,12 +144,19 @@ class LoginController: UIViewController {
         passwordTextFieldHeightAnchor?.isActive = false
         passwordTextFieldHeightAnchor = passwordTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 1/2 : 1/3)
         passwordTextFieldHeightAnchor?.isActive = true
+    
+    
+        if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
+            
+        } else {
+            
+        }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor(r: 61, g: 91, b: 151)
+        view.backgroundColor = UIColor(r: 13, g: 71, b: 161)
         
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterButton)

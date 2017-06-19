@@ -42,10 +42,16 @@ class MessagesController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(r: 23, g: 100, b: 188)
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        navigationItem.leftBarButtonItem?.tintColor = .white
         
         let image = UIImage(named: "new_message_icon")
+    
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(handleNewMessage))
+        
+        navigationItem.rightBarButtonItem?.tintColor = .white
         
         checkIfUserIsLoggedIn()
         
@@ -261,9 +267,10 @@ class MessagesController: UITableViewController {
         profileImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         let nameLabel = UILabel()
-        
+    
         containerView.addSubview(nameLabel)
         nameLabel.text = user.name
+        nameLabel.textColor = .white
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         //need x,y,width,height anchors
         nameLabel.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 8).isActive = true
@@ -273,6 +280,7 @@ class MessagesController: UITableViewController {
         
         containerView.centerXAnchor.constraint(equalTo: titleView.centerXAnchor).isActive = true
         containerView.centerYAnchor.constraint(equalTo: titleView.centerYAnchor).isActive = true
+        
         
         self.navigationItem.titleView = titleView
         
