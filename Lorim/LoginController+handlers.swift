@@ -17,7 +17,7 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
             return
         }
         
-        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             
             if error != nil {
                 print(error!)
@@ -30,13 +30,13 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
             
             //successfully authenticated user
             let imageName = UUID().uuidString
-            let storageRef = FIRStorage.storage().reference().child("profile_images").child("\(imageName).jpg")
+            let storageRef = Storage.storage().reference().child("profile_images").child("\(imageName).jpg")
             
             if let profileImage = self.profileImageView.image, let uploadData = UIImageJPEGRepresentation(profileImage, 0.1) {
                 
                 //            if let uploadData = UIImagePNGRepresentation(self.profileImageView.image!) {
                 
-                storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
+                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
                     
                     if error != nil {
                         print(error!)
@@ -51,11 +51,11 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
                     }
                 })
             }
-        })
+        }
     }
     
     fileprivate func registerUserIntoDatabaseWithUID(_ uid: String, values: [String: AnyObject]) {
-        let ref = FIRDatabase.database().reference()
+        let ref = Database.database().reference()
         let usersReference = ref.child("users").child(uid)
         
         usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in

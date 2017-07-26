@@ -33,7 +33,7 @@ class Message: NSObject {
     }
     
     func chatPartnerId() -> String? {
-        return fromId == FIRAuth.auth()?.currentUser?.uid ? toId : fromId
+        return fromId == Auth.auth().currentUser?.uid ? toId : fromId
     }
     
 }

@@ -11,7 +11,6 @@
 		2E4C3ED51E3B24920083D490 /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C3ED41E3B24920083D490 /* NewMessageController.swift */; };
 		2E4C3ED81E3BB2F90083D490 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C3ED71E3BB2F90083D490 /* User.swift */; };
 		2E4C3EDA1E3BBAA30083D490 /* LoginController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C3ED91E3BBAA30083D490 /* LoginController+handlers.swift */; };
-		2E77E4D11EDF9C990074C2C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E77E4D01EDF9C990074C2C2 /* GoogleService-Info.plist */; };
 		2EBC89CE1E3E61DE00C37073 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC89CD1E3E61DE00C37073 /* ChatLogController.swift */; };
 		2EBC89D01E4108D600C37073 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC89CF1E4108D600C37073 /* Message.swift */; };
 		2EBC89D31E410E3700C37073 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC89D21E410E3700C37073 /* UserCell.swift */; };
@@ -25,6 +24,7 @@
 		2EDD669B1E255CE200441D55 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD669A1E255CE200441D55 /* LoginController.swift */; };
 		2EDD669D1E255FA300441D55 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD669C1E255FA300441D55 /* MessagesController.swift */; };
 		3A4C0034F972B7D544CB82E7 /* Pods_LorimTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39517357BF96B6DD679F67E6 /* Pods_LorimTests.framework */; };
+		658AF8C31F2947EC003229FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 658AF8C21F2947EC003229FF /* GoogleService-Info.plist */; };
 		D30765F239D0FBF3B057AE73 /* Pods_LorimUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C89E05647B570D301E81BEC /* Pods_LorimUITests.framework */; };
 		F13A2BCC46995D1A5644930E /* Pods_Lorim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6ABD05FA96ED3904DF8D50 /* Pods_Lorim.framework */; };
 /* End PBXBuildFile section */
@@ -54,7 +54,6 @@
 		2E4C3ED41E3B24920083D490 /* NewMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
 		2E4C3ED71E3BB2F90083D490 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E4C3ED91E3BBAA30083D490 /* LoginController+handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginController+handlers.swift"; sourceTree = "<group>"; };
-		2E77E4D01EDF9C990074C2C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EBC89CD1E3E61DE00C37073 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		2EBC89CF1E4108D600C37073 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2EBC89D21E410E3700C37073 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		39517357BF96B6DD679F67E6 /* Pods_LorimTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LorimTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FD31900A57107D2B409BD5 /* Pods-Lorim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lorim.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lorim/Pods-Lorim.release.xcconfig"; sourceTree = "<group>"; };
 		55DE9C9F5FF6AA8E4CC4B449 /* Pods-Lorim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lorim.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lorim/Pods-Lorim.debug.xcconfig"; sourceTree = "<group>"; };
+		658AF8C21F2947EC003229FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		86411D60D34DF168C0F88AFC /* Pods-LorimUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LorimUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LorimUITests/Pods-LorimUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8CC206CBBF13AEB9572293BE /* Pods-LorimTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LorimTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LorimTests/Pods-LorimTests.release.xcconfig"; sourceTree = "<group>"; };
 		F078B2EB96302EA892D38485 /* Pods-LorimTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LorimTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LorimTests/Pods-LorimTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 				2E4C3ED61E3BB2EC0083D490 /* Model */,
 				2E4C3ED31E3B22C00083D490 /* Controller */,
 				2EDD666A1E255B5700441D55 /* AppDelegate.swift */,
-				2E77E4D01EDF9C990074C2C2 /* GoogleService-Info.plist */,
+				658AF8C21F2947EC003229FF /* GoogleService-Info.plist */,
 				2EDD66711E255B5700441D55 /* Assets.xcassets */,
 				2EDD66731E255B5700441D55 /* LaunchScreen.storyboard */,
 				2EDD66761E255B5700441D55 /* Info.plist */,
@@ -358,7 +358,7 @@
 			files = (
 				2EDD66751E255B5700441D55 /* LaunchScreen.storyboard in Resources */,
 				2EDD66721E255B5700441D55 /* Assets.xcassets in Resources */,
-				2E77E4D11EDF9C990074C2C2 /* GoogleService-Info.plist in Resources */,
+				658AF8C31F2947EC003229FF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +436,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		51B39AA93B7F660B2C98506B /* [CP] Check Pods Manifest.lock */ = {
@@ -451,7 +451,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5D6AE5D3ADE3663B0C7DCAE1 /* [CP] Copy Pods Resources */ = {
@@ -496,7 +496,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F071E9495298021E53B47143 /* [CP] Embed Pods Frameworks */ = {
